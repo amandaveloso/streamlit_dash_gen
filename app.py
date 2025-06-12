@@ -14,7 +14,8 @@ st.set_page_config(
 )
 
 st.title("📊 ExcelViz: Gerador de Dashboards Automático")
-st.markdown("Faça o upload do seu arquivo Excel (.xlsx ou .xls) e visualize seus dados instantaneamente!")
+st.markdown("Que tal analisar rapidamente seu arquivo excel e obter insights relevantes?
+Faça o upload do seu arquivo Excel (.xlsx ou .xls) e visualize seus dados instantaneamente!")
 
 # --- 1. Upload do Arquivo ---
 uploaded_file = st.file_uploader("Escolha um arquivo Excel", type=["xlsx", "xls"])
@@ -34,7 +35,7 @@ if uploaded_file is not None:
 
         # Separar colunas por tipo para análise
         numerical_cols = df.select_dtypes(include=np.number).columns.tolist()
-        # CORREÇÃO AQUI: Removido o "= df" indevido
+        
         categorical_cols = df.select_dtypes(include=['object', 'category']).columns.tolist()
         datetime_cols = df.select_dtypes(include=['datetime64[ns]']).columns.tolist()
 
@@ -133,4 +134,4 @@ else:
     st.info("Aguardando o upload de um arquivo Excel para gerar o dashboard...")
 
 st.markdown("---")
-st.markdown("Desenvolvido para portfólio de Analista de Dados - [@SeuNome ou SeuGitHub](https://github.com/seu-usuario)")
+st.markdown("Desenvolvido para portfólio [@amandaveloso](https://github.com/amandaveloso)")
