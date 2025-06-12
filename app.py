@@ -14,8 +14,7 @@ st.set_page_config(
 )
 
 st.title("📊 ExcelViz: Gerador de Dashboards Automático")
-st.markdown("Que tal analisar rapidamente seu arquivo excel e obter insights relevantes?
-Faça o upload do seu arquivo Excel (.xlsx ou .xls) e visualize seus dados instantaneamente!")
+st.markdown("Que tal analisar rapidamente seu arquivo excel e obter insights relevantes? Faça o upload do seu arquivo Excel (.xlsx ou .xls) e visualize seus dados instantaneamente!")
 
 # --- 1. Upload do Arquivo ---
 uploaded_file = st.file_uploader("Escolha um arquivo Excel", type=["xlsx", "xls"])
