@@ -219,3 +219,9 @@ if uploaded_file is not None:
 else:
     st.info("⬆️ Aguardando o upload de um arquivo Excel ou CSV para gerar o dashboard...")
 
+st.markdown("---")
+
+st.markdown("Desenvolvido para portfólio [Github - Amanda Veloso](https://github.com/amandaveloso)")
+
+
+
