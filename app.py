@@ -5,14 +5,14 @@ import numpy as np
 
 # --------------------- CONFIGURAÇÃO DA PÁGINA ---------------------
 st.set_page_config(
-    page_title="Rapidinho: Seu companheiro de análise",
+    page_title="Rapidinho - Amanda Veloso",
     page_icon="🏃🏻‍♂️",
     layout="wide",
     initial_sidebar_state="auto"
 )
 
 # --------------------- TÍTULO E INSTRUÇÕES ---------------------
-st.title("🏃🏻‍♂️ Rapidinho: Gerador de Dashboards Automático")
+st.title("🏃🏻‍♂️ Rapidinho: Seu companheiro de análise")
 with st.expander("Instruções: Como usar o Rapidinho?"):
     st.markdown(
         "Que tal analisar rapidamente seu arquivo Excel e obter insights relevantes? \n"
