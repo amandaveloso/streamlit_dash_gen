@@ -2,8 +2,6 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import numpy as np
-import streamlit_cloud 
-import cloud_resource
 
 # --------------------- CONFIGURAÇÃO DA PÁGINA ---------------------
 st.set_page_config(
@@ -221,28 +219,3 @@ if uploaded_file is not None:
 else:
     st.info("⬆️ Aguardando o upload de um arquivo Excel ou CSV para gerar o dashboard...")
 
-
-# --------------------- CONTADOR DE VISITAS E FOOTER ---------------------
-@st.cache_data(ttl=600)  # Cache for 10 minutes to reduce reads
-def get_visits():
-    with cloud_resource(name="visit_counter.txt", type="text") as visits_file:
-        try:
-            count = int(visits_file.getvalue())
-        except ValueError:
-            count = 0
-        return count
-
-def increment_visits():
-    with cloud_resource(name="visit_counter.txt", type="text") as visits_file:
-        current_visits = get_visits() + 1
-        visits_file.write(str(current_visits))
-        return current_visits
-
-visits = increment_visits()
-
-st.markdown("---")
-col_footer1, col_footer2 = st.columns([0.7, 0.3])
-with col_footer1:
-    st.markdown("Desenvolvido para portfólio por [@amandaveloso](https://github.com/amandaveloso)")
-with col_footer2:
-    st.markdown(f"**Visitas à página:** {visits} 🚀")
