@@ -220,7 +220,6 @@ if uploaded_file is not None:
 else:
     st.info("⬆️ Aguardando o upload de um arquivo Excel ou CSV para gerar o dashboard...")
 
----
 
 # --------------------- CONTADOR DE VISITAS E FOOTER ---------------------
 @st.cache_data(ttl=600)  # Cache for 10 minutes to reduce reads
