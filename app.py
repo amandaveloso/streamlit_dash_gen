@@ -5,7 +5,7 @@ import numpy as np
 
 # --------------------- CONFIGURAÇÃO DA PÁGINA ---------------------
 st.set_page_config(
-    page_title="Rapidinho: Gerador de Dashboards",
+    page_title="Rapidinho: Seu companheiro de análise",
     page_icon="🏃🏻‍♂️",
     layout="wide",
     initial_sidebar_state="auto"
